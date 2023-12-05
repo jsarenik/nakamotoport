@@ -1,0 +1,1553 @@
+<!doctype html>
+<html lang="en">
+    <link rel="icon" href="/static/images/favicon-bitcoin.ico" class="invert">
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQT21B6DNE"></script>
+        <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YQT21B6DNE');
+        </script>
+        <!-- Marketo -->
+        <script type="text/javascript">
+        (function() {
+        var didInit = false;
+        function initMunchkin() {
+            if(didInit === false) {
+            didInit = true;
+            Munchkin.init('875-XKQ-634');
+            }
+        }
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '//munchkin.marketo.net/munchkin.js';
+        s.onreadystatechange = function() {
+            if (this.readyState == 'complete' || this.readyState == 'loaded') {
+            initMunchkin();
+            }
+        };
+        s.onload = initMunchkin;
+        document.getElementsByTagName('head')[0].appendChild(s);
+            })();
+        </script>
+        <meta charset="UTF-8">
+        
+        <title>Nakamoto Portfolio | S&amp;P Case-Shiller Indices</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="/static/images/favicon-bitcoin.ico">
+        <!-- BOOTSTRAP -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous"
+        >
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        <!-- LOCAL CSS -->
+        <link rel="stylesheet" href="/static/css/warden_main.css">
+        <link rel="stylesheet" href="/static/css/ascii.css">
+        <link rel="stylesheet" href="/static/dependencies/font-awesome/css/all.css">
+        <!-- JQUERY -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!-- Utilities - APP -->
+        <script src="/static/js/utils.js"></script>
+        <script src="/static/js/layout.js"></script>
+        <script src="/static/js/page_transition.js"></script>
+    </head>
+    <body style="margin-bottom: 40px;" class="dark-mode" data-bs-theme="dark">
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/nakamoto/start">
+                    <img
+                        src="/static/images/swan-icon-snow.png"
+                        alt="Logo"
+                        width="30"
+                        height="30"
+                    >
+                </a>
+                <span class="no-background text-white">
+                    Powered by
+                    <a class="nolink" target="_blank" href="https://www.swanbitcoin.com/bitcoin-ira/?gc=nakamoto-portfolio&utm_campaign=nakamoto-portfolio">
+                        Swan
+                    </a>
+                    Research
+                </span>
+                <!-- Toggle Button for Dark and Light Mode -->
+            </div>
+        </nav>
+        <!-- Main Content -->
+        <div id="page-content-wrapper">
+            <main role="main">
+                <div class="" style="padding-top: 70px;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
+
+<div class="row" style="padding-top:10px;padding-left:80px;padding-right:80px;">
+    <!-- Title -->
+    <div class="row">
+        <div class="col-9 ">
+            <h4 class="text-green">
+                S&P Case-Shiller Indices
+            </h4>
+        </div>
+        <div class="col-3 text-end">
+            <a role="button" class="btn btn-sm btn-outline-warning" style="width: 200px;"
+                href="/apps/case_shiller/table">
+                See data in
+                <br>
+                Table Format
+            </a>
+        </div>
+    </div>
+    <div class="row" style="padding-top: 10px;">
+        <div class="col-9">
+            <p>
+                The S&P CoreLogic Case-Shiller Home Price Indices are the leading measures of U.S. residential real
+                estate prices, tracking changes in the value of residential real estate both nationally as well as in 20
+                metropolitan regions. The indices are calculated monthly and published with a two month lag.
+            </p>
+            <h6 class="text-white">
+                Indices Latest Release Date:
+                <span class="text-purple">Sep 01, 2023</span>
+            </h6>
+        </div>
+        <div class="col-3 text-end ">
+            <a role="button" style="width: 200px;" class="btn btn-sm btn-outline-light include-btc"
+                href="/apps/case_shiller/chart?no_btc=false">
+                Include Bitcoin
+                <br>
+                <span class="text-muted text-60-small">(this will shorten the date range)</span>
+            </a>
+            <a role="button" style="width: 200px;" class="btn btn-sm btn-outline-light exclude-btc"
+                href="/apps/case_shiller/chart">
+                Exclude Bitcoin
+                <br>
+                <span class="text-muted text-60-small">(this will widen the date range)</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="row" style="padding-top:10px;padding-left:80px;padding-right:80px;">
+    <div class="col-10">
+        <div class="chart-box" id="chart1" style="height: 600px;"></div>
+    </div>
+</div>
+<div class="row" style="padding-top:10px;padding-left:80px;padding-right:80px;">
+    <div class="col-10">
+        <div class="chart-box" id="chart2" style="height: 600px;"></div>
+    </div>
+</div>
+
+<script>
+    var chart1Data = [];
+    var chart2Data = [];
+
+    var urlParams = new URLSearchParams(window.location.search);
+
+    var no_btc = urlParams.get('no_btc');
+
+    if (no_btc === 'true') {
+        $('.include-btc').show();
+        $('.exclude-btc').hide();
+    } else if (no_btc === 'false') {
+        $('.include-btc').hide();
+        $('.exclude-btc').show();
+    } else {
+        // Handle the case where 'no_btc' parameter is not present
+        // Here I've chosen to show both buttons but you can adjust as needed
+        $('.include-btc').show();
+        $('.exclude-btc').hide();
+    }
+
+
+    
+    var color = '#f0e68c';
+    var name;
+    
+    
+    
+    
+    
+    
+    
+    
+    name = 'Greater Los Angeles';
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    chart1Data.push({ y: 6.2308520101926, name: name, color: color});
+    chart2Data.push({ y: 3.6793480079516883, name: name, color: color});
+    
+    var color = '#f0e68c';
+    var name;
+    
+    
+    
+    
+    
+    
+    name = 'Phoenix metropolitan area';
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    chart1Data.push({ y: 5.092087092031838, name: name, color: color});
+    chart2Data.push({ y: 2.5405830897909265, name: name, color: color});
+    
+    var color = '#f0e68c';
+    var name;
+    
+    
+    
+    
+    name = 'Composite 20 Index';
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    color = '#c38ec7';
+    
+    chart1Data.push({ y: 4.984190770208907, name: name, color: color});
+    chart2Data.push({ y: 2.4326867679679953, name: name, color: color});
+    
+    var color = '#f0e68c';
+    var name;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    name = 'San Francisco';
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    chart1Data.push({ y: 5.430050855022861, name: name, color: color});
+    chart2Data.push({ y: 2.878546852781949, name: name, color: color});
+    
+    var color = '#f0e68c';
+    var name;
+    
+    
+    name = 'Composite 10 Index';
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    color = '#c38ec7';
+    
+    chart1Data.push({ y: 5.178271303186532, name: name, color: color});
+    chart2Data.push({ y: 2.6267673009456205, name: name, color: color});
+    
+    var color = '#f0e68c';
+    var name;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    name = 'San Diego County, California';
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    chart1Data.push({ y: 6.2395158615984325, name: name, color: color});
+    chart2Data.push({ y: 3.6880118593575206, name: name, color: color});
+    
+    var color = '#f0e68c';
+    var name;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    name = 'Tampa Bay Area';
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    chart1Data.push({ y: 5.832766433359238, name: name, color: color});
+    chart2Data.push({ y: 3.281262431118326, name: name, color: color});
+    
+    var color = '#f0e68c';
+    var name;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    name = 'Denver-Aurora Metropolitan Area';
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    chart1Data.push({ y: 4.987614079563429, name: name, color: color});
+    chart2Data.push({ y: 2.4361100773225175, name: name, color: color});
+    
+    var color = '#f0e68c';
+    var name;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    name = 'South Florida metropolitan area';
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    chart1Data.push({ y: 6.295190486705149, name: name, color: color});
+    chart2Data.push({ y: 3.743686484464237, name: name, color: color});
+    
+    var color = '#f0e68c';
+    var name;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    name = 'Washington Metropolitan Area';
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    chart1Data.push({ y: 4.95326362735784, name: name, color: color});
+    chart2Data.push({ y: 2.401759625116928, name: name, color: color});
+    
+    var color = '#f0e68c';
+    var name;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    name = 'Atlanta metropolitan area';
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    chart1Data.push({ y: 3.7917553055332176, name: name, color: color});
+    chart2Data.push({ y: 1.2402513032923057, name: name, color: color});
+    
+    var color = '#f0e68c';
+    var name;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    name = 'Chicago metropolitan area';
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    chart1Data.push({ y: 2.923805179779637, name: name, color: color});
+    chart2Data.push({ y: 0.37230117753872527, name: name, color: color});
+    
+    var color = '#f0e68c';
+    var name;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    name = 'Greater Boston';
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    chart1Data.push({ y: 5.068148139973361, name: name, color: color});
+    chart2Data.push({ y: 2.516644137732449, name: name, color: color});
+    
+    var color = '#f0e68c';
+    var name;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    name = 'Metro Detroit';
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    chart1Data.push({ y: 2.560077336854416, name: name, color: color});
+    chart2Data.push({ y: 0.00857333461350418, name: name, color: color});
+    
+    var color = '#f0e68c';
+    var name;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    name = 'Las Vegas metropolitan area';
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    chart1Data.push({ y: 4.4932071203261925, name: name, color: color});
+    chart2Data.push({ y: 1.9417031180852806, name: name, color: color});
+    
+    var color = '#f0e68c';
+    var name;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    name = 'Minneapolis-Saint Paul';
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    chart1Data.push({ y: 3.7117727823972935, name: name, color: color});
+    chart2Data.push({ y: 1.1602687801563816, name: name, color: color});
+    
+    var color = '#f0e68c';
+    var name;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    name = 'Charlotte metropolitan area';
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    chart1Data.push({ y: 4.277061815137895, name: name, color: color});
+    chart2Data.push({ y: 1.7255578128969828, name: name, color: color});
+    
+    var color = '#f0e68c';
+    var name;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    name = 'New York metropolitan area';
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    chart1Data.push({ y: 4.6233323411706495, name: name, color: color});
+    chart2Data.push({ y: 2.0718283389297376, name: name, color: color});
+    
+    var color = '#f0e68c';
+    var name;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    color = '#5fba7d';
+    name = 'Consumer Price Index (Urban)';
+    
+    
+    chart1Data.push({ y: 2.551504002240912, name: name, color: color});
+    chart2Data.push({ y: 0.0, name: name, color: color});
+    
+    var color = '#f0e68c';
+    var name;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    name = 'Greater Cleveland';
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    chart1Data.push({ y: 2.5910009770852005, name: name, color: color});
+    chart2Data.push({ y: 0.0394969748442886, name: name, color: color});
+    
+    var color = '#f0e68c';
+    var name;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    name = 'Portland metropolitan area';
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    chart1Data.push({ y: 5.105095554926664, name: name, color: color});
+    chart2Data.push({ y: 2.553591552685752, name: name, color: color});
+    
+    var color = '#f0e68c';
+    var name;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    name = 'Dallas–Fort Worth metroplex';
+    
+    
+    
+    
+    
+    
+    
+    chart1Data.push({ y: 4.676642147125709, name: name, color: color});
+    chart2Data.push({ y: 2.1251381448847972, name: name, color: color});
+    
+    var color = '#f0e68c';
+    var name;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    name = 'Seattle metropolitan area';
+    
+    
+    
+    
+    
+    chart1Data.push({ y: 5.689347213347817, name: name, color: color});
+    chart2Data.push({ y: 3.1378432111069054, name: name, color: color});
+    
+
+    // Sort the data
+    chart1Data.sort(function (a, b) { return b.y - a.y; });
+    chart2Data.sort(function (a, b) { return b.y - a.y; });
+
+    Highcharts.chart('chart1', {
+        chart: {
+            type: 'bar',
+            backgroundColor: null,
+            style: { fontFamily: 'Arial', color: '#FFFFFF' },
+            zoomType: 'none' // Disable zoom
+        },
+        title: {
+            text: 'Nominal Returns (annualized)<br>Data since: Jan 01, 2000',
+            style: { color: '#FFFFFF' }
+        },
+        xAxis: {
+            categories: chart1Data.map(function (x) { return x.name; }),
+            title: { text: null },
+            labels: { style: { color: '#FFFFFF' } }
+        },
+        yAxis: {
+            title: { text: 'Returns', align: 'high', style: { color: '#FFFFFF' } },
+            labels: {
+                overflow: 'justify',
+                style: { color: '#FFFFFF' },
+                format: '{value}%'
+            }
+        },
+        tooltip: {
+            pointFormat: '<span style="color:{point.color}">\u25CF</span><b>{point.y:.2f}%</b><br/>'
+        },
+        plotOptions: {
+            bar: { dataLabels: { enabled: true, format: '{y:.2f}%' } }
+        },
+        legend: {
+            enabled: false,
+            itemStyle: { color: '#FFFFFF' }
+        },
+        credits: { text: 'Source: FRED - Federal Reserve of St. Louis' },
+        series: [{ data: chart1Data }]
+    });
+
+    Highcharts.chart('chart2', {
+        chart: {
+            type: 'bar',
+            backgroundColor: null,
+            style: { fontFamily: 'Arial', color: '#FFFFFF' },
+            zoomType: 'none' // Disable zoom
+        },
+        title: {
+            text: 'Real Returns above CPI (annualized)<br>Data since: Jan 01, 2000',
+            style: { color: '#FFFFFF' }
+        },
+        xAxis: {
+            categories: chart2Data.map(function (x) { return x.name; }),
+            title: { text: null },
+            labels: { style: { color: '#FFFFFF' } }
+        },
+        yAxis: {
+            title: { text: 'Returns', align: 'high', style: { color: '#FFFFFF' } },
+            labels: {
+                overflow: 'justify',
+                style: { color: '#FFFFFF' },
+                format: '{value}%'
+            }
+        },
+        tooltip: {
+            pointFormat: '<span style="color:{point.color}">\u25CF</span><b>{point.y:.2f}%</b><br/>'
+        },
+        plotOptions: {
+            bar: { dataLabels: { enabled: true, format: '{y:.2f}%' } }
+        },
+        legend: {
+            enabled: false,
+            itemStyle: { color: '#FFFFFF' }
+        },
+        credits: { text: 'Source: FRED - Federal Reserve Economic Data - St. Louis ' },
+        series: [{ data: chart2Data }]
+    });
+</script>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- Footer -->
+            <footer class="site-footer small
+                                fixed-bottom text-white">
+                <div class="float-start" style="margin-left: 20px;">
+                    Bitcoiners Run the Numbers
+                </div>
+                <div class=" float-end" style="margin-right: 20px;">
+                    Copyright &copy; 2023&nbsp;Swan Research | Important
+                    <a href="/disclaimers" class="text-white">DISCLAIMERS</a>
+                </div>
+            </footer>
+            <!-- END OF WRAPPER -->
+             
+            <!-- Chart Modal -->
+            <script src="/static/js/modal_chart.js"></script>
+        </body>
+    </html>

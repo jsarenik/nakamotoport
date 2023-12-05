@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+    <link rel="icon" href="/static/images/favicon-bitcoin.ico" class="invert">
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQT21B6DNE"></script>
+        <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YQT21B6DNE');
+        </script>
+        <!-- Marketo -->
+        <script type="text/javascript">
+        (function() {
+        var didInit = false;
+        function initMunchkin() {
+            if(didInit === false) {
+            didInit = true;
+            Munchkin.init('875-XKQ-634');
+            }
+        }
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '//munchkin.marketo.net/munchkin.js';
+        s.onreadystatechange = function() {
+            if (this.readyState == 'complete' || this.readyState == 'loaded') {
+            initMunchkin();
+            }
+        };
+        s.onload = initMunchkin;
+        document.getElementsByTagName('head')[0].appendChild(s);
+            })();
+        </script>
+        <meta charset="UTF-8">
+        
+        <title>Nakamoto Portfolio | Portfolio</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="/static/images/favicon-bitcoin.ico">
+        <!-- BOOTSTRAP -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous"
+        >
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        <!-- LOCAL CSS -->
+        <link rel="stylesheet" href="/static/css/warden_main.css">
+        <link rel="stylesheet" href="/static/css/ascii.css">
+        <link rel="stylesheet" href="/static/dependencies/font-awesome/css/all.css">
+        <!-- JQUERY -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!-- Utilities - APP -->
+        <script src="/static/js/utils.js"></script>
+        <script src="/static/js/layout.js"></script>
+        <script src="/static/js/page_transition.js"></script>
+    </head>
+    <body style="margin-bottom: 40px;" class="dark-mode" data-bs-theme="dark">
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/nakamoto/start">
+                    <img
+                        src="/static/images/swan-icon-snow.png"
+                        alt="Logo"
+                        width="30"
+                        height="30"
+                    >
+                </a>
+                <span class="no-background text-white">
+                    Powered by
+                    <a class="nolink" target="_blank" href="https://www.swanbitcoin.com/bitcoin-ira/?gc=nakamoto-portfolio&utm_campaign=nakamoto-portfolio">
+                        Swan
+                    </a>
+                    Research
+                </span>
+                <!-- Toggle Button for Dark and Light Mode -->
+            </div>
+        </nav>
+        <!-- Main Content -->
+        <div id="page-content-wrapper">
+            <main role="main">
+                <div class="" style="padding-top: 70px;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                
+<link rel="stylesheet" href="/static/orangenomics/css/bootstrap.css">
+<!-- LOCAL theme CSS -->
+<link rel="stylesheet" href="/static/orangenomics/css/local.css">
+<!-- Utilities - APP -->
+<script src="/static/orangenomics/js/portfolioUtils.js"></script>
+<!-- HighCharts -->
+<!--  High Charts -->
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script src="https://code.highcharts.com/modules/boost.js"></script>
+<script src="https://code.highcharts.com/modules/heatmap.js"></script>
+<!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
+<!-- HighCharts JS for page -->
+<script src="/static/js/highcharts.js"></script>
+<!-- Sidebar -->
+<style>
+    #rotate-device {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 1000;
+            display: none;
+            text-align: center;
+        }
+        #rotate-device h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+</style>
+<div id="rotate-device">
+    <h4>
+        <i class="fa-solid fa-mobile-screen fa-lg text-white">
+            <i class="fa-solid fa-rotate-right text-white"></i>
+        </i>
+    </h4>
+    <h3>Please rotate your device</h3>
+    <h6 class="text-green">
+        This page only works
+        <br>
+        in landscape mode in
+        <br>
+        mobile devices
+    </h6>
+    <h6 class="text-yellow">
+        This page is optimized
+        <br>
+        for desktop browsers.
+        <br>
+        Mobile experience will be limited
+    </h6>
+</div>
+<div class="app-container">
+    <!-- Sidebar -->
+    <div id="navbar" class="sidebar-wrapper">
+        <div
+            class="offcanvas offcanvas-start custom-offcanvas"
+            tabindex="-1"
+            id="sidebarMenu"
+            aria-labelledby="sidebarMenuLabel"
+        >
+            <div class="offcanvas-body">
+                <div class="d-grid gap-2" style="padding-bottom: 80px;">
+                    <button class="btn btn-sm btn-outline-warning" id="go_back">
+                        <i class="fa-regular fa-circle-left fa-lg"></i>
+                        &nbsp;new portfolio
+                    </button>
+                    <span class="text-center text-small text-light">Analytics</span>
+                    <button class="btn btn-sm btn-outline-light" data-tab="overview" onclick="showTab('overview')">Overview</button>
+                    <button class="btn btn-sm btn-outline-light btn-active" data-tab="summary" onclick="showTab('summary')">Statistics</button>
+                    <button class="btn btn-sm btn-outline-light" data-tab="results" onclick="showTab('results')">Risk/Return</button>
+                    <button class="btn btn-sm btn-outline-light" data-tab="drawdown_tab" onclick="showTab('drawdown_tab')">Drawdown</button>
+                    <button class="btn btn-sm btn-outline-light" data-tab="allocation_tab" onclick="showTab('allocation_tab')">Allocation</button>
+                    <button class="btn btn-sm btn-outline-light" data-tab="ranked_tab" onclick="showTab('ranked_tab')">Annual Rank</button>
+                    <button class="btn btn-sm btn-outline-light" data-tab="asset_r_tab" onclick="showTab('asset_r_tab')">Asset Returns</button>
+                    <button class="btn btn-sm btn-outline-light" data-tab="sim_r_tab" onclick="showTab('sim_r_tab')">Sim Returns</button>
+                    <button class="btn btn-sm btn-outline-light" data-tab="corr_tab" onclick="showTab('corr_tab')">Correlation Matrix</button>
+                    <button class="btn btn-sm btn-outline-light" data-tab="rolling_corr_tab" onclick="showTab('rolling_corr_tab')">Rolling Correlation</button>
+                    <button class="btn btn-sm btn-outline-light" data-tab="scatter_tab" onclick="showTab('scatter_tab')">Scatter Plots</button>
+                    <button class="btn btn-sm btn-outline-light" data-tab="risk_parity" onclick="showTab('risk_parity')">Optimization</button>
+                    <button class="btn btn-sm btn-outline-light" data-tab="historical_returns" onclick="showTab('historical_returns')">Historical Returns</button>
+                    <button class="btn btn-sm btn-outline-light" data-tab="monte_carlo" onclick="showTab('monte_carlo')">Monte Carlo Simulation</button>
+                    
+                    
+                    <a
+                        href="/apps/asset_report?ticker=[&#39;FTGC&#39;, &#39;PDBC&#39;, &#39;DBC&#39;, &#39;GSG&#39;, &#39;COMT&#39;, &#39;BTC&#39;]"
+                        target="_blank"
+                        class="btn btn-sm btn-outline-light"
+                        role="button"
+                    >
+                        More Stats&nbsp;
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-content" style="padding-bottom: 80px;">
+        <div class="row">
+            <div class="col">
+                
+                                                
+                                                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+<style>
+    #rotate-device {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 1000;
+            display: none;
+            text-align: center;
+        }
+        #rotate-device h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+</style>
+<div id="rotate-device">
+    <h4>
+        <i class="fa-solid fa-mobile-screen fa-lg text-white">
+            <i class="fa-solid fa-rotate-right text-white"></i>
+        </i>
+    </h4>
+    <h3>Please rotate your device</h3>
+    <h6 class="text-green">
+        This page only works
+        <br>
+        in landscape mode in
+        <br>
+        mobile devices
+    </h6>
+    <h6 class="text-yellow">
+        This page is optimized
+        <br>
+        for desktop browsers.
+        <br>
+        Mobile experience will be limited
+    </h6>
+</div>
+<div class="row" style="padding: 20px 20px 20px 20px">
+    <div class="col">
+        <h6 class="text-white">
+            <i class="fa-solid fa-chart-pie"></i>
+            &nbsp;&nbsp;portfolio analytics
+            <span class="float-end">
+                <a
+                    href="/apps/portfolio_explorer"
+                    type="button"
+                    id="load_modal_button_off"
+                    class="btn btn-outline-warning text-small"
+                >
+                    portfolio templates
+                </a>
+            </span>
+        </h6>
+    </div>
+</div>
+<div id="portfolio_box" class="row" style="padding: 00px 20px 0px 20px">
+    <div class="col-12 content-section text-start">
+        <!-- send jinja2 portfolio variable to javascript -->
+<script>
+  var portfolio = [];
+</script>
+<table class="table table-server text-white">
+    <thead>
+        <tr>
+            <td style="width: 7%"></td>
+            <td class="text-start" id="ticker">
+                ticker&nbsp;
+                <i
+                    class="fa-solid fa-circle-info text-yellow"
+                    data-bs-toggle="tooltip"
+                    data-bs-html="true"
+                    data-bs-title="Enter a ticker<br>Example: <span class='text-green'>SPY</span> for S&P 500<hr>You can also specify a source<br>Example: <span class='text-green'>yahoo:AAPL</span> will get Apple from source Yahoo.<hr>Available sources<br><span class='text-green'>yahoo, cryptocompare, FRED, fmp and twelvedata<span>"
+                    data-bs-placement="right"
+                ></i>
+            </td>
+            <td id="name" class="text-start">asset</td>
+            <td id="name" class="text-end">weight</td>
+            <td style="width: 7%"></td>
+        </tr>
+    </thead>
+    <tbody id="portfolio_body">
+        <tr>
+            <td class="loadanim" colspan="100%">loading...</td>
+        </tr>
+    </tbody>
+</table>
+<script src="/static/orangenomics/js/portfolio_consts.js"></script>
+    </div>
+</div>
+<div class="row" style="padding: 0px 20px 0px 20px">
+    <div class="col" id="start_input">
+        <div class="d-grid gap-2">
+            <button class="btn btn-success btn-lg float-end align-self-end text-white text-large" id="analyze">
+                analyze this portfolio&nbsp;&nbsp;
+                <i class="fa-solid fa-circle-arrow-right text-white fa-lg next-arrow"></i>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="row" style="padding: 20px 20px 0px 20px">
+    <div class="col-6">
+        <div id="ticker_results" class="content-section"></div>
+    </div>
+    <div class="col-6">
+        <div id="dates_input" class="content-section">
+            <div class="text-light text-end">Simulation Options</div>
+            <div class="input-group  mb-auto">
+                <span class="input-group-text " style="width: 100px;">start date</span>
+                <input
+                    type="date"
+                    disabled
+                    class="form-control text-end"
+                    id="start_date"
+                >
+            </div>
+            <div class="input-group  mb-auto">
+                <span class="input-group-text " style="width: 100px;">end date</span>
+                <input
+                    type="date"
+                    disabled
+                    class="form-control text-end"
+                    id="end_date"
+                >
+            </div>
+            <div class="input-group  mb-auto">
+                <span class="input-group-text" style="width: 100px;">rebalance</span>
+                <select class="form-select" id="rebalance" disabled>
+                    <option selected value="never">never</option>
+                    <option value="monthly">monthly</option>
+                    <option value="quarterly">quarterly</option>
+                    <option value="semi-annually">semi-annually</option>
+                    <option value="annually">annually</option>
+                    <option value="every 4 years">Every 4 years</option>
+                </select>
+            </div>
+            <div class="input-group  mb-auto">
+                <span class="input-group-text" style="width: 100%">Rolling window for calculations</span>
+                <br>
+                <input
+                    type="text"
+                    id="rolling_window"
+                    class="form-control text-end"
+                    value="30"
+                >
+            </div>
+            <div class="input-group  mb-auto">
+                <span class="input-group-text" style="width: 100%">BTC Allocations to simulate (comma-separated)</span>
+                <br>
+                <input
+                    type="text"
+                    id="allocations"
+                    class="form-control text-end"
+                    value="0.01, 0.05, 0.10"
+                >
+            </div>
+        </div>
+        <div id="portfolio_results" class="content-section"></div>
+    </div>
+</div>
+</div>
+<script src="/static/orangenomics/js/portfolio.js"></script>
+<script src="/static/orangenomics/js/portfolioUtils.js"></script>
+</div>
+        </div>
+    </div>
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- Footer -->
+            <footer class="site-footer small
+                                fixed-bottom text-white">
+                <div class="float-start" style="margin-left: 20px;">
+                    Bitcoiners Run the Numbers
+                </div>
+                <div class=" float-end" style="margin-right: 20px;">
+                    Copyright &copy; 2023&nbsp;Swan Research | Important
+                    <a href="/disclaimers" class="text-white">DISCLAIMERS</a>
+                </div>
+            </footer>
+            <!-- END OF WRAPPER -->
+             
+            <!-- Chart Modal -->
+            <script src="/static/js/modal_chart.js"></script>
+        </body>
+    </html>

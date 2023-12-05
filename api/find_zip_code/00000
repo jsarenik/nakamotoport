@@ -1,0 +1,10 @@
+[
+  {
+    "description": "A composite index of the home price index for 20 major Metropolitan Statistical Areas in the United States.",
+    "name": "Composite 20 Index",
+    "property_tax": 0.01,
+    "ticker": "SPCS20RSA",
+    "zip": null
+  },
+  99999999999999
+]

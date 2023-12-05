@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+    <link rel="icon" href="/static/images/favicon-bitcoin.ico" class="invert">
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQT21B6DNE"></script>
+        <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YQT21B6DNE');
+        </script>
+        <!-- Marketo -->
+        <script type="text/javascript">
+        (function() {
+        var didInit = false;
+        function initMunchkin() {
+            if(didInit === false) {
+            didInit = true;
+            Munchkin.init('875-XKQ-634');
+            }
+        }
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '//munchkin.marketo.net/munchkin.js';
+        s.onreadystatechange = function() {
+            if (this.readyState == 'complete' || this.readyState == 'loaded') {
+            initMunchkin();
+            }
+        };
+        s.onload = initMunchkin;
+        document.getElementsByTagName('head')[0].appendChild(s);
+            })();
+        </script>
+        <meta charset="UTF-8">
+        
+        <title>Nakamoto Portfolio | IRA Client Calculator</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="/static/images/favicon-bitcoin.ico">
+        <!-- BOOTSTRAP -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous"
+        >
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        <!-- LOCAL CSS -->
+        <link rel="stylesheet" href="/static/css/warden_main.css">
+        <link rel="stylesheet" href="/static/css/ascii.css">
+        <link rel="stylesheet" href="/static/dependencies/font-awesome/css/all.css">
+        <!-- JQUERY -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!-- Utilities - APP -->
+        <script src="/static/js/utils.js"></script>
+        <script src="/static/js/layout.js"></script>
+        <script src="/static/js/page_transition.js"></script>
+    </head>
+    <body style="margin-bottom: 40px;" class="dark-mode" data-bs-theme="dark">
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/nakamoto/start">
+                    <img
+                        src="/static/images/swan-icon-snow.png"
+                        alt="Logo"
+                        width="30"
+                        height="30"
+                    >
+                </a>
+                <span class="no-background text-white">
+                    Powered by
+                    <a class="nolink" target="_blank" href="https://www.swanbitcoin.com/bitcoin-ira/?gc=nakamoto-portfolio&utm_campaign=nakamoto-portfolio">
+                        Swan
+                    </a>
+                    Research
+                </span>
+                <!-- Toggle Button for Dark and Light Mode -->
+            </div>
+        </nav>
+        <!-- Main Content -->
+        <div id="page-content-wrapper">
+            <main role="main">
+                <div class="" style="padding-top: 70px;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<style>
+
+    #rotate-device {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 1000;
+            display: none;
+            text-align: center;
+        }
+        #rotate-device h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+    input[type='range']::-webkit-slider-thumb {
+  background-color: rgb(141, 255, 168);
+
+}
+
+input[type='range']::-moz-range-thumb {
+  background-color: rgb(141, 255, 168);
+
+
+}
+</style>
+<div class="row align-items-start" style="padding-left: 40px;padding-right: 40px;">
+    <div class="col-4 col-md-4 col-lg-4 text-white">
+        <div class="card h-100">
+            <div class="card-body text-white">
+                <div class="text-center">
+                    <p>
+                        I'm
+                        <input
+                            type="text"
+                            value="35"
+                            class="ira-input"
+                            id="age"
+                        >
+                        years old, and have an income of $
+                        <input
+                            type="text"
+                            value="100,000"
+                            class="ira-input"
+                            id="income"
+                        >
+                        .
+                        <br>
+                        My current IRA balance
+                        is $
+                        <input
+                            type="text"
+                            value="100,000"
+                            class="ira-input"
+                            id="savings"
+                        >
+                        <br>
+                    </p>
+                    <label for="allocation-slider" class="mr-2">My expected allocation to Bitcoin is:</label>
+                    <br>
+                    <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="20"
+                        class="slider"
+                        id="allocation-slider"
+                    >
+                    <span class="ml-2" id="allocation-value">20%</span>
+                </div>
+            </div>
+        </div>
+        <div class="card h-100 mt-2">
+            <div class="card-body text-white">
+                <div class="text-center">
+                    <p class="text-small">
+                        This assumes a
+                        <input
+                            type="text"
+                            value="67"
+                            class="ira-input"
+                            id="retirementAge"
+                        >
+                        year old retirement age, annual contributions of $
+                        <input
+                            type="text"
+                            value="6,500"
+                            class="ira-input"
+                            id="annualContribution"
+                        >
+                        and that your filling it as a
+                        <select class="ira-dropdown" id="taxStatus">
+                            <option value="single">single</option>
+                            <option value="married_filing_separately">married filing separately</option>
+                            <option value="married_filing_jointly">married filing jointly</option>
+                            <option value="head_of_household">head of household</option>
+                        </select>
+                        status.
+                    </p>
+                    <p class="text-60-small text-start" style="line-height: 1.4!important;">
+                        <i class="fas fa-info-circle fa-lg text-white"></i>
+                        &nbsp;
+                        Given the information above, it seems like your
+                        <a href="https://www.irs.gov/retirement-plans/traditional-and-roth-iras" target="_blank">maximum contribution</a>
+                        is $
+                        <span id="annual_cont_max">loading...</span>
+                        and your effective tax rate is
+                        <span id="effectiveTaxRate">loading...</span>
+                        %
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card h-100 mt-2">
+            <div class="card-body text-white">
+                <div class="row d-flex justify-content-center" id="scenario_buttons">
+                    Scenario
+                </div>
+                <div class="row justify-content-center" style="padding-top: -20px;">
+                    <div class="col-12" id="sliders">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <small>Expected Annual Returns</small>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <small class="m-0 mt-3 float-start">
+                                    Bitcoin&nbsp;
+                                    <i class="fa-brands fa-bitcoin text-orange fa-lg"></i>
+                                    <p class="float-end text-strong" id="bitcoin-return">0%</p>
+                                </small>
+                                <input
+                                    type="range"
+                                    min="0"
+                                    max="30"
+                                    value="10"
+                                    class="slider"
+                                    id="bitcoin-slider"
+                                    orient="vertical"
+                                >
+                            </div>
+                            <div class="row">
+                                <small class="m-0 mt-3 float-start">
+                                    60/40&nbsp;
+                                    <i class="fa-solid fa-chart-pie fa-lg fa-muted"></i>
+                                    <p class="float-end text-strong" id="sixtyfourty-return">0%</p>
+                                </small>
+                                <input
+                                    type="range"
+                                    min="0"
+                                    max="30"
+                                    value="5"
+                                    class="slider"
+                                    id="sixtyfourty-slider"
+                                    orient="vertical"
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="card h-100 mt-2">
+                    <div class="card-body text-white">
+                        <div class="row">
+                            <div class="text-center">
+                                <div class="text-large text-bold">
+                                    $
+                                    <span id="ira-bitcoin">Loading...</span>
+                                </div>
+                                <hr class="field-description">
+                                <small class="dashboard-label">
+                                    IRA with Bitcoin at Retirement
+                                </small>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="text-center">
+                                <div class="text-large text-bold">
+                                    $
+                                    <span id="ira-no-bitcoin">Loading...</span>
+                                </div>
+                                <hr class="field-description">
+                                <small class="dashboard-label">
+                                    IRA without Bitcoin at Retirement
+                                </small>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="text-center">
+                                <div class="text-large text-bold">
+                                    <span id="bitcoin-savings">Loading...</span>
+                                </div>
+                                <hr class="field-description">
+                                <small class="dashboard-label">
+                                    Bitcoin in IRA savings
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card h-100 mt-2">
+                    <div class="card-body text-white">
+                        <div class="row">
+                            <div class="text-center">
+                                <div class="text-large text-bold">
+                                    $
+                                    <span id="ira-balance">Loading...</span>
+                                </div>
+                                <hr class="field-description">
+                                <small class="dashboard-label">
+                                    IRA Balance at Retirement
+                                </small>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="text-center">
+                                <div class="text-large text-bold">
+                                    $
+                                    <span id="taxable-balance">Loading...</span>
+                                </div>
+                                <hr class="field-description">
+                                <small class="dashboard-label">
+                                    Taxable Account Balance at Retirement
+                                </small>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="text-center">
+                                <div class="text-large text-bold">
+                                    <span id="savings-balance">Loading...</span>
+                                </div>
+                                <hr class="field-description">
+                                <small class="dashboard-label">
+                                    IRA savings
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-8 col-md-8 col-lg-8">
+        <div class="row">
+            <div class="col-12">
+                <div class="chart-box">
+                    <div id="ira-container" style="height: 800px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row align-items-start" style="padding-left: 40px;padding-right: 40px;">
+    <div class="col-12 col-md-12 col-lg-12 text-center"></div>
+    <div class="row justify-content-center" style="padding-top: 20px;">
+        <hr>
+        <h6 class="text-center lead">Sensitivity Analysis</h6>
+        <div class="col">
+            <div class="chart-box mb-2">
+                <div id="chart-BTC" style="height: 400px;"></div>
+            </div>
+            <div class="chart-box mb-2">
+                <div id="chart-simulation-1"></div>
+                <div id="sim-1-label" class="card-body"></div>
+            </div>
+            <div class="chart-box mb-2">
+                <div id="chart-simulation-2"></div>
+                <div id="sim-2-label" class="card-body"></div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="chart-box mb-2">
+                <div id="chart-simulation-3"></div>
+                <div id="sim-3-label" class="card-body"></div>
+            </div>
+            <div class="chart-box mb-2">
+                <div id="chart-simulation-4"></div>
+                <div id="sim-4-label" class="card-body"></div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="chart-box mb-2">
+                <div id="chart-simulation-5"></div>
+                <div id="sim-5-label" class="card-body"></div>
+                <div class="btn-group dropstart card-body">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                        Select current IRA provider
+                    </button>
+                    <ul class="dropdown-menu">
+                        
+                        <li>
+                            <a class="dropdown-item select_ira">Swan IRA</a>
+                        </li>
+                        
+                        <li>
+                            <a class="dropdown-item select_ira">Unchained IRA</a>
+                        </li>
+                        
+                        <li>
+                            <a class="dropdown-item select_ira">iTrust IRA</a>
+                        </li>
+                        
+                        <li>
+                            <a class="dropdown-item select_ira">Choice Custodial (Cold Storage)</a>
+                        </li>
+                        
+                        <li>
+                            <a class="dropdown-item select_ira">Choice (Hold your keys)</a>
+                        </li>
+                        
+                        <li>
+                            <a class="dropdown-item select_ira">Bitcoin IRA</a>
+                        </li>
+                        
+                        <li>
+                            <a class="dropdown-item select_ira">Robinhood IRA</a>
+                        </li>
+                        
+                        <li>
+                            <a class="dropdown-item select_ira">Alto Crypto IRA</a>
+                        </li>
+                        
+                        <li>
+                            <a class="dropdown-item select_ira">GBTC held at brokerage IRA</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="/static/orangenomics/js/ira_client.js"></script>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- Footer -->
+            <footer class="site-footer small
+                                fixed-bottom text-white">
+                <div class="float-start" style="margin-left: 20px;">
+                    Bitcoiners Run the Numbers
+                </div>
+                <div class=" float-end" style="margin-right: 20px;">
+                    Copyright &copy; 2023&nbsp;Swan Research | Important
+                    <a href="/disclaimers" class="text-white">DISCLAIMERS</a>
+                </div>
+            </footer>
+            <!-- END OF WRAPPER -->
+             
+            <!-- Chart Modal -->
+            <script src="/static/js/modal_chart.js"></script>
+        </body>
+    </html>
