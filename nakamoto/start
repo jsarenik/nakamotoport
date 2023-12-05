@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="en">
+    <link rel="icon" href="/static/images/favicon-bitcoin.ico" class="invert">
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQT21B6DNE"></script>
+        <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YQT21B6DNE');
+        </script>
+        <!-- Marketo -->
+        <script type="text/javascript">
+        (function() {
+        var didInit = false;
+        function initMunchkin() {
+            if(didInit === false) {
+            didInit = true;
+            Munchkin.init('875-XKQ-634');
+            }
+        }
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '//munchkin.marketo.net/munchkin.js';
+        s.onreadystatechange = function() {
+            if (this.readyState == 'complete' || this.readyState == 'loaded') {
+            initMunchkin();
+            }
+        };
+        s.onload = initMunchkin;
+        document.getElementsByTagName('head')[0].appendChild(s);
+            })();
+        </script>
+        <meta charset="UTF-8">
+        
+        <title>Nakamoto Portfolio | Powered by Swan Research</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="/static/images/favicon-bitcoin.ico">
+        <!-- BOOTSTRAP -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous"
+        >
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        <!-- LOCAL CSS -->
+        <link rel="stylesheet" href="/static/css/warden_main.css">
+        <link rel="stylesheet" href="/static/css/ascii.css">
+        <link rel="stylesheet" href="/static/dependencies/font-awesome/css/all.css">
+        <!-- JQUERY -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!-- Utilities - APP -->
+        <script src="/static/js/utils.js"></script>
+        <script src="/static/js/layout.js"></script>
+        <script src="/static/js/page_transition.js"></script>
+    </head>
+    <body style="margin-bottom: 40px;" class="dark-mode" data-bs-theme="dark">
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/nakamoto/start">
+                    <img
+                        src="/static/images/swan-icon-snow.png"
+                        alt="Logo"
+                        width="30"
+                        height="30"
+                    >
+                </a>
+                <span class="no-background text-white">
+                    Powered by
+                    <a class="nolink" target="_blank" href="https://www.swanbitcoin.com/bitcoin-ira/?gc=nakamoto-portfolio&utm_campaign=nakamoto-portfolio">
+                        Swan
+                    </a>
+                    Research
+                </span>
+                <!-- Toggle Button for Dark and Light Mode -->
+            </div>
+        </nav>
+        <!-- Main Content -->
+        <div id="page-content-wrapper">
+            <main role="main">
+                <div class="" style="padding-top: 70px;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                
+<div class="container">
+    <div class="row gy-4" style="padding-top:20px;">
+        <!-- Title -->
+        <div class="col-lg-6">
+            <h4 class="text-green">Nakamoto Portfolio</h4>
+            A set of tools, research and open source code to explore the ground breaking effects that Bitcoin
+            has on the financial world.
+            <hr>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Swan Research&nbsp;
+                        <i class="fa-solid fa-infinity  text-white float-end"></i>
+                    </h5>
+                    <hr>
+                    <p class="card-text">
+                        Swan's mission is to drive Bitcoin adoption globally.
+                        Our new initiative, Swan Research, provides free & open source investment insights which have
+                        been historically reserved only for Wall Street institutions.
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                <h5 class="card-title">
+                    Principles&nbsp;
+                    <i id="icon" class="icon fa-solid fa-feather-pointed text-yellow float-end"></i>
+                    <img id="hi_principal" style="margin-top:200px;" height="180px"
+                        src="/static/images/principals.jpg">
+                </h5>
+                <hr>
+                
+                    <p class="card-text">
+                        We are building Swan research with these core principles in mind:
+                        <br>
+                        <br>
+                        <i class="fa-solid fa-feather-pointed text-muted"></i>
+                        &nbsp;
+                        <span class="text-yellow">Open Source Ethos</span>
+                        -=- no need to trust, just verify
+                        <br>
+                        <i class="fa-solid fa-feather-pointed text-muted"></i>
+                        &nbsp;
+                        <span class="text-yellow">Focus on Frameworks</span>
+                        -=-
+                        assist in understanding concepts
+                        <br>
+                        <i class="fa-solid fa-feather-pointed text-muted"></i>
+                        &nbsp;
+                        <span class="text-yellow">Acknowledging Model Limitations</span>
+                        -=- all models are broken, some are useful
+                        <br>
+                        <i class="fa-solid fa-feather-pointed text-muted"></i>
+                        &nbsp;
+                        <span class="text-yellow">No Price Predictions</span>
+                        -=- impossible in a nascent technology
+                        <br>
+                        <i class="fa-solid fa-feather-pointed text-muted"></i>
+                        &nbsp;
+                        <span class="text-yellow">Bitcoiner-led</span>
+                        -=- no shitcoins
+                    </p>
+                </div>
+                <div class="card-footer text-muted text-end">
+                    <i class="fa-solid text-green fa-cube"></i>
+                    &nbsp;Swan Research was launched at block
+                    <a class="text-white nolink" target="_blank"
+                        href="https://timechaincalendar.com/en/block/784117">784,117</a>
+                    <div class="text-muted text-end">
+                        <i class="fa-solid text-green fa-sitemap"></i>
+                        <span >Swan website</span>
+                        <a class="text-white" target="_blank" style="text-decoration: none"
+                            href="https://www.swanbitcoin.com/">
+                            <span class='text-white nolink'>
+                                swanbitcoin.com
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+                
+            </div>
+            <div class="col-lg-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Bitcoin Network Stats
+                            <i class="fa-solid fa-circle-info fa-stats text-white float-end"></i>
+                        </h5>
+                        <hr>
+                        <p class="card-text">
+                            NgU Tech
+                        <span class="float-end" id="btc_price">
+                            <span class="loadanim text-muted">connecting</span>
+                        </span>
+                        <br>
+                        24hr change in price
+                        <span class="float-end" id="btc_variation">
+                            <span class="loadanim text-muted">connecting</span>
+                        </span>
+                        <br>
+                        sats/usd
+                        <span class="float-end" id="sats_price">
+                            <span class="loadanim text-muted">connecting</span>
+                        </span>
+                        <br>
+                        <hr>
+                        <span> 
+                            <b>Mining Details</b>
+                        </span>
+                        <br>
+                        Current Network Hashrate
+                        <span class="float-end" id="current_hashrate">
+                            <div class="loadanim text-muted">connecting</div>
+                        </span>
+                        <br>
+                        Progress to next difficulty adjustment
+                        <span id="dificulty_change">
+                            <span class="">
+                                <span class="loadanim text-muted float-end">connecting</span>
+                                <br>
+                                <div class="task-progress">
+                                    <progress class="progress" max="100" value="${difficultyChange.toFixed(2)}"></progress>
+                                  </div>
+                            </span>
+                        </span>
+                        Next Adjustment
+                        <span class="float-end" id="next_adjustments">
+                            <span class="loadanim text-muted">connecting</span>
+                        </span>
+                        <br>
+                        Estimated difficulty adjustment
+                        <span class="float-end" id="estimated_adjustment">
+                            <span class="loadanim text-muted">connecting</span>
+                        </span>
+                        <br>
+                        Previous Adjustment
+                        <span class="float-end" id="previous_adjustment">
+                            <span class="loadanim text-muted">connecting</span>
+                        </span>
+                        <br>
+                        
+                        <hr>
+                        <span> 
+                            <b>Estimated Network Fees</b>
+                        </span>
+                        <br>
+                        Fastest
+                        <span class="float-end" id="fastest_fee">
+                            <div class="loadanim text-muted">connecting</div>
+                        </span>
+                        <br>
+                        1 hour
+                        <span class="float-end" id="one_hour_fee">
+                            <span class="loadanim text-muted">connecting</span>
+                        </span>
+                        <br>
+                        30 minutes
+                        <span class="float-end" id="half_hour_fee">
+                            <span class="loadanim text-muted">connecting</span>
+                        </span>
+                        <br>
+                        Min Fee
+                        <span class="float-end" id="minimum_fee">
+                            <span class="loadanim text-muted">connecting</span>
+                        </span>
+                        <hr>
+                        <p class="text-green display-center">Countdown to Bitcoin Halving</p>
+                        <p id="halving_countdown">
+                            <span class="display-center">
+                                <span class="loadanim text-muted">connecting</span>
+                            </span>
+                        </p>
+                    </p>
+                </div>
+                
+                <div class="card-footer text-muted text-end">
+                    <i class="fa-solid text-green fa-cube"></i>
+                    <span style="padding-right: 5px;">Updated at Block height</span>
+                    <a class="text-white nolink" target="_blank"
+                        href="https://timechaincalendar.com/en/">
+                        <span id="block_height">
+                            <span class="loadanim text-muted">connecting</span>
+                        </span>
+                    </a>
+                    <div class="text-muted text-end">
+                        <span>Source:</span>
+                        <a
+                          class="text-white"
+                          target="_blank"
+                          href="https://mempool.space/docs/api/rest"
+                          style="text-decoration: none"
+                        >
+                            <span class="text-white nolink">mempool.space API</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row gy-4" style="padding-top:20px;">
+        <!-- Shrodinger Model -->
+        <div class="col-lg-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Bitcoin's Schrödinger Model&nbsp;
+                        <i class="fa-solid fa-cat text-white float-end"></i>
+                    </h5>
+                    <hr>
+                    <p class="card-text">
+                        The Schrödinger Coin Model is based on the concept of quantum superposition, where an object can
+                        simultaneously exist in multiple states until observed.
+                    </p>
+                    <p class="card-text">
+                        Bitcoin has been compared to various forms of property and other assets traditionally used for
+                        storing value. In the absence of sound money, rational investors allocate capital to real
+                        estate, stocks, and other alternatives as stores of value.
+                    </p>
+                    <p class="card-text">
+                        This model values Bitcoin based on the probability of capturing the monetary premium of some of
+                        these assets.
+                    </p>
+                    <hr>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                        <a href="/apps/shrodinger" class="btn btn-outline-success flex-grow-1 my-1 mx-1 text-white">
+                            <i class="fa-solid fa-square-root-variable fa-lg text-white"></i>
+                            &nbsp;Run the Numbers
+                        </a>
+                        <a href="/static/docs/Schrodingers_Coin_Model.pdf" target="_blank"
+                            class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                            <i class="fa-solid fa-feather-pointed fa-lg text-white"></i>
+                            &nbsp;White Paper
+                        </a>
+                        <a href="https://github.com/pxsocs/Schrodinger_Model" target="_blank"
+                            class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                            <i class="fa-brands fa-github fa-lg text-white"></i>
+                            &nbsp;Open Source Code
+                        </a>
+                        <a href="https://twitter.com/alphaazeta/status/1643605139414999042" target="_blank"
+                            class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                            <i class="fa-brands fa-square-twitter fa-lg text-white"></i>
+                            &nbsp;Original Twitter Thread
+                        </a>
+                        <a href="nostr:note14xktyum2k2pz2c96m0t4tq9tksghfpj0ldyqqhkpfhu8sd3esstsczyxll" target="_blank"
+                            class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                            <i class="fa-solid fa-egg fa-lg text-purple"></i>
+                            &nbsp;Original NOSTR Thread
+                        </a>
+                    </div>
+                </div>
+                <div class="card-footer text-muted text-end">
+                    <i class="fa-solid text-green fa-cube"></i>
+                    &nbsp;First published at block
+                    <a class="text-white nolink" target="_blank"
+                        href="https://timechaincalendar.com/en/block/784117">784,117</a>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Analytics -->
+        <div class="col-lg-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Portfolio Analytics&nbsp;
+                        <i class="fa-solid fa-chart-pie text-white float-end"></i>
+                    </h5>
+                    <hr>
+                    <p class="card-text">
+                        Simulate the effects of adding Bitcoin to your portfolio.
+                    </p>
+                    <p class="card-text">
+                        The portfolio analytics tool will simulate different allocations to a portfolio and measure
+                        return, risk, correlation and several other variables.
+                    </p>
+                    <p class="card-text">
+                        The model will also run optimization to find the optimal allocation to Bitcoin based on risk
+                        tolerance.
+                    </p>
+                    <hr>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center">
+                            <a href="/orangenomics/portfolio"
+                                class="btn btn-outline-success flex-grow-1 my-1 mx-1 text-white">
+                                <i class="fa-solid fa-square-root-variable fa-lg text-white"></i>
+                                &nbsp;Run the Numbers
+                            </a>
+                            <a href="/apps/portfolio_explorer"
+                                class="btn btn-outline-success flex-grow-1 my-1 mx-1 text-white">
+                                <i class="fa-solid fa-book-atlas fa-lg text-white"></i>
+                                &nbsp;Portfolio Templates
+                            </a>
+                            <a href="https://youtu.be/HF5IQmuNW_8" target="_blank"
+                                class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                                <i class="fa-brands fa-youtube fa-lg text-white"></i>
+                                &nbsp;Video Tutorial
+                                <span class="text-muted float-end">4 min</span>
+                            </a>
+                            <a href="https://github.com/pxsocs/nakamoto_code" target="_blank"
+                                class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                                <i class="fa-brands fa-github fa-lg text-white"></i>
+                                &nbsp;Open Source Code
+                            </a>
+                            <a href="https://twitter.com/alphaazeta/status/1640005261099139073" target="_blank"
+                                class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                                <i class="fa-brands fa-square-twitter fa-lg text-white"></i>
+                                &nbsp;Original Twitter Thread
+                            </a>
+                            <a href="https://stephanlivera.com/episode/475/" target="_blank"
+                                class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                                <i class="fa-solid fa-podcast fa-lg text-white"></i>
+                                &nbsp;Podcast with Stephan Livera
+                            </a>
+                            <a href="/static/docs/2023-05-A-New-Age-Dawns.pdf" target="_blank"
+                                class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                                <i class="fa-solid fa-feather-pointed fa-lg text-white"></i>
+                                &nbsp;A new age dawns for financial advisors
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-muted text-end">
+                    <i class="fa-solid text-green fa-cube"></i>
+                    &nbsp;First published at block
+                    <a class="text-white nolink" target="_blank"
+                        href="https://timechaincalendar.com/en/block/786678">786,678</a>
+                </div>
+            </div>
+        </div>
+        <!-- DCA -->
+        <div class="col-lg-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        DCA or Lumpsum?&nbsp;
+                        <i class="fa-solid fa-sack-dollar text-white float-end"></i>
+                    </h5>
+                    <hr>
+                    <p class="card-text">
+                        We often hear about two main strategies for bitcoin accumulation: Lump-sum investing and
+                        Dollar-Cost Averaging (DCA).
+                    </p>
+                    <p class="card-text">
+                        Lump-sum investing involves investing all available funds at once, while DCA involves allocating
+                        funds over regular intervals.
+                        We ran the numbers and found that lump-sum investing has
+                        <a class="text-white"
+                            href="/apps/dca_sim?ticker=BTC&capital=1000&frequency=D&start_date=2017-04-13&end_date=2023-04-13&upfront_percent=0&allocation_periods=180">
+                            historically outperformed
+                        </a>
+                        DCA strategies. This is primarily due to Bitcoin's explosive upward price movements.
+                    </p>
+                    <p class="card-text">
+                        But DCA can lead to significant outperformance during bear markets.
+                        For instance, investors who bought at all-time highs but employed DCA afterward were able to
+                        break even significantly quicker.
+                        <a class="text-white"
+                            href="/apps/dca_sim?ticker=BTC&capital=10,000&frequency=D&start_date=2022-04-13&upfront_percent=0&allocation_periods=365">
+                            See the simulation results
+                        </a>
+                        .
+                        While DCA has potential drawbacks, such as reduced returns in consistently rising markets, it
+                        remains a popular method for managing risk and promoting disciplined investing.
+                    </p>
+                    <hr>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                        <a href="/apps/dca_sim" class="btn btn-outline-success flex-grow-1 my-1 mx-1 text-white">
+                            <i class="fa-solid fa-square-root-variable fa-lg text-white"></i>
+                            &nbsp;Run the Numbers
+                        </a>
+                        <a href="/static/docs/DCA_Lumpsum.pdf" target="_blank"
+                            class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                            <i class="fa-solid fa-feather-pointed fa-lg text-white"></i>
+                            &nbsp;Research Paper
+                        </a>
+                        <a href="https://github.com/pxsocs/allocator/blob/master/allocation_strategies.ipynb"
+                            target="_blank" class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                            <i class="fa-brands fa-github fa-lg text-white"></i>
+                            &nbsp;Open Source Code
+                        </a>
+                        <a href="https://twitter.com/alphaazeta/status/1636694124563775489" target="_blank"
+                            class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                            <i class="fa-brands fa-square-twitter fa-lg text-white"></i>
+                            &nbsp;Original Twitter Thread
+                        </a>
+                        <a href="nostr:note1yq3xcmm5hht0l372cezs5ypq7xpc0n892amrkg6y9e7qc97mx5sskx54l7" target="_blank"
+                            class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                            <i class="fa-solid fa-egg fa-lg text-purple"></i>
+                            &nbsp;Original NOSTR Thread
+                        </a>
+                    </div>
+                </div>
+                <div class="card-footer text-muted text-end">
+                    <i class="fa-solid text-green fa-cube"></i>
+                    &nbsp;First published at block
+                    <a class="text-white nolink" target="_blank"
+                        href="https://timechaincalendar.com/en/block/785197">785,197</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Real Estate -->
+        <div class="col-lg-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Real Estate: From bricks to bits&nbsp;
+                        <i class="fa-solid fa-trowel-bricks text-white float-end"></i>
+                    </h5>
+                    <hr>
+                    <p class="card-text">
+                        Unmask the truths and fallacies of the real estate market, an exploration that goes beneath the
+                        surface.
+                    </p>
+                    <p class="card-text">
+                        Is real estate truly the perfect shield against inflation? Perhaps it's time to reevaluate this
+                        age-old belief.
+                    </p>
+                    <p class="card-text">
+                        Even the best-performing areas do not offer significant real estate returns above inflation
+                        after considering real estate costs.
+                    </p>
+
+                    <p class="card-text">
+                        We've crunched the numbers, studied historical returns, and scrutinized the fundamentals to
+                        determine if real estate truly delivers on its promises. The hidden (and not so hidden) costs
+                        eat away most if not all of the returns.
+                    </p>
+                    <hr>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                        <a href="/apps/real_estate" class="btn btn-outline-success flex-grow-1 my-1 mx-1 text-white">
+                            <i class="fa-solid fa-square-root-variable fa-lg text-white"></i>
+                            &nbsp;Run the Numbers
+                        </a>
+                        <a href="/static/docs/FromBricksToBits.pdf" target="_blank"
+                            class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                            <i class="fa-solid fa-feather-pointed fa-lg text-white"></i>
+                            &nbsp;Research Paper
+                        </a>
+                        <div class="d-flex flex-wrap justify-content-between align-items-center">
+                            <a href="/apps/case_shiller/chart"
+                                class="btn btn-outline-success flex-grow-1 my-1 mx-1 text-white">
+                                <i class="fa-solid fa-home fa-lg text-white"></i>
+                                &nbsp;S&P Case-Shiller Home Price Indices
+                            </a>
+                        </div>
+                        <a href="https://github.com/pxsocs/nakamoto_code/blob/main/real_estate.py" target="_blank"
+                            class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                            <i class="fa-brands fa-github fa-lg text-white"></i>
+                            &nbsp;Open Source Code
+                        </a>
+                        <a href="https://twitter.com/alphaazeta/status/1668643899097636864" target="_blank"
+                            class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                            <i class="fa-brands fa-square-twitter fa-lg text-white"></i>
+                            &nbsp;Original Twitter Thread
+                        </a>
+                    </div>
+                </div>
+                <div class="card-footer text-muted text-end">
+                    <i class="fa-solid text-green fa-cube"></i>
+                    &nbsp;First published at block
+                    <a class="text-white nolink" target="_blank"
+                        href="https://timechaincalendar.com/en/block/794180">794,180</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Return Analysis -->
+        <div class="col-lg-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Bitcoin Historical Return Analysis&nbsp;
+                        <i class="fa-solid fa-chart-simple  text-white float-end"></i>
+                    </h5>
+                    <hr>
+                    <p class="card-text">
+                        We've taken a deep dive into Bitcoin's price behavior over the past decade.
+                    </p>
+                    <p class="card-text">
+                        Turns out, bitcoin's returns aren't as
+                        <span class="text-yellow">'normal'</span>
+                        as expected.
+                        Our analysis suggests that some distributions fit
+                        bitcoin's quirky behavior better than others.
+                        Add to this some interesting findings about how Bitcoin's past returns
+                        influence its future and we're onto some promising methods for
+                        predicting its price swings.
+                    </p>
+                    <p class="card-text">
+                        But remember, with bitcoin's notorious unpredictability, these forecasts are
+                        about getting a sense of potential moves, not crystal ball gazing.
+                    </p>
+                    <hr>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                        <a href="/apps/ticker_data" class="btn btn-outline-success flex-grow-1 my-1 mx-1 text-white">
+                            <i class="fa-solid fa-square-root-variable fa-lg text-white"></i>
+                            &nbsp;Run the Numbers
+                        </a>
+                        <a href="/static/docs/Bitcoin_Historical_Returns_Analysis.pdf" target="_blank"
+                            class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                            <i class="fa-solid fa-feather-pointed fa-lg text-white"></i>
+                            &nbsp;Research Paper
+                        </a>
+                        <a href="https://github.com/pxsocs/nakamoto_code/blob/main/bitcoin_distribution.ipynb"
+                            target="_blank" class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                            <i class="fa-brands fa-github fa-lg text-white"></i>
+                            &nbsp;Open Source Code
+                        </a>
+                        <a href="https://twitter.com/alphaazeta/status/1663919358718951425" target="_blank"
+                            class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                            <i class="fa-brands fa-square-twitter fa-lg text-white"></i>
+                            &nbsp;Original Twitter Thread
+                        </a>
+                    </div>
+                </div>
+                <div class="card-footer text-muted text-end">
+                    <i class="fa-solid text-green fa-cube"></i>
+                    &nbsp;First published at block
+                    <a class="text-white nolink" target="_blank"
+                        href="https://timechaincalendar.com/en/block/792259">792,259</a>
+                </div>
+            </div>
+        </div>
+        <!-- IRA -->
+        <div class="col-lg-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Bitcoin & Retirement Accounts&nbsp;
+                        <i class="fa-solid fa-umbrella-beach  text-white float-end"></i>
+                    </h5>
+                    <hr>
+                    <p class="card-text">
+                        Including bitcoin in a retirement account has several potential benefits.
+                    </p>
+                    <p class="card-text">
+                        An IRA with bitcoin can provide diversification, higher returns, and protection against
+                        debasement. Starting early, contributing annually and minimizing fees are critical.
+                    </p>
+                    <p class="card-text">
+                        You can run different scenarios below.
+                    </p>
+                    <hr>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                        <a href="/apps/ira/ira_client" class="btn btn-outline-success flex-grow-1 my-1 mx-1 text-white">
+                            <i class="fa-solid fa-square-root-variable fa-lg text-white"></i>
+                            &nbsp;Run the Numbers
+                        </a>
+                        <a href="https://www.swanbitcoin.com/why-bitcoin-is-the-ultimate-asset-for-your-ira/"
+                            target="_blank" class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                            <i class="fa-solid fa-feather-pointed fa-lg text-white"></i>
+                            &nbsp;Blog Post
+                        </a>
+                        <a href="https://swanbitcoin.zoom.us/webinar/register/rec/WN_u2ovTxrLQVWLyOhnaJVjXw?meetingId=LvI3JzJiZvNwuKMb_NUP5ZUMjV5DVfzldsWA96yC2pc4cLbiahKMC0ERCK7EUEx5.60xgPwdB357LzVHO&playId=&action=play?hasValidToken=false&originRequestUrl=https%3A%2F%2Fswanbitcoin.zoom.us%2Frec%2Fshare%2F-ncJSruz5WeD8QuALlJhj4XtZ9zAw97cA_v1AWGta75LrYNj4_QWHwaFE8np4YtB.oSxSZNMVjvrxy-i1#/registration"
+                            target="_blank" class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                            <i class="fa-solid fa-video fa-lg text-white"></i>
+                            &nbsp;Webinar Recording
+                            <br>
+                            <span class="text-60-small text muted">Why Bitcoin is the Ultimate Asset to Include in an
+                                IRA</span>
+                        </a>
+                        <a href="https://github.com/pxsocs/nakamoto_code" target="_blank"
+                            class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                            <i class="fa-brands fa-github fa-lg text-white"></i>
+                            &nbsp;Open Source Code
+                        </a>
+                        <a href="https://twitter.com/alphaazeta/status/1647991517749866498" target="_blank"
+                            class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                            <i class="fa-brands fa-square-twitter fa-lg text-white"></i>
+                            &nbsp;Original Twitter Thread
+                        </a>
+                    </div>
+                </div>
+                <div class="card-footer text-muted text-end">
+                    <i class="fa-solid text-green fa-cube"></i>
+                    &nbsp;First published at block
+                    <a class="text-white nolink" target="_blank"
+                        href="https://timechaincalendar.com/en/block/785836">785,836</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gauntlet -->
+        <div class="col-lg-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        The Nakamoto Gauntlet&nbsp;
+                        <i class="fa-solid fa-chess text-white float-end"></i>
+                    </h5>
+                    <hr>
+                    <p class="card-text">
+                        The Nakamoto Portfolio Gauntlet is a monthly show that explores the impact of integrating
+                        Bitcoin into
+                        established hedge funds, pension funds, and other investment portfolios.
+                    </p>
+                    <p class="card-text">
+                        Hosted by industry experts and featuring guest fund managers, the show runs selected funds
+                        through the gauntlet
+                        to analyze the financial and human effects of Bitcoin allocation.
+                        It provides real-time analysis, discussions, and hypothetical scenarios to help fund managers
+                        understand the potential benefits
+                        and risks of including Bitcoin in their portfolios. The goal is to create a safe platform for
+                        learning and experimentation,
+                        promoting the adoption of Bitcoin in the traditional finance world.
+                    </p>
+                    <hr>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                        <a href="/apps/nakamoto_gauntlet"
+                            class="btn btn-outline-success flex-grow-1 my-1 mx-1 text-white">
+                            <i class="fa-solid fa-square-root-variable fa-lg text-white"></i>
+                            &nbsp;Episode List and Suggested Allocations
+                        </a>
+                    </div>
+                </div>
+                <div class="card-footer text-muted text-end">
+                    <i class="fa-solid text-green fa-cube"></i>
+                    &nbsp;First published at block
+                    <a class="text-white nolink" target="_blank"
+                        href="https://timechaincalendar.com/en/block/796150">796,150</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOSS -->
+        <div class="col-lg-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Bitcoin Priced as Default Insurance on a Basket of Sovereigns&nbsp;
+                        <i class="fa-solid fa-money-check-dollar text-white float-end"></i>
+                    </h5>
+                    <hr>
+                    <p class="card-text">
+                        Inspired by Greg Foss's work, this model utilizes the credit default swap (CDS) market to
+                        estimate the value of Bitcoin.
+                    </p>
+                    <p class="card-text">
+                        We employ the CDS market to estimate the probability of default for various countries.
+                        Subsequently, we use the probability of default to determine the value of Bitcoin.
+                    </p>
+                    <p class="card-text">
+                        Like all our research, this serves as a framework, not a model. We are not attempting to predict
+                        the future; instead, we aim to comprehend potential outcomes and the impact various variables
+                        could have on Bitcoin's valuation.
+                    </p>
+                    <hr>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                        <a href="/apps/foss" class="btn btn-outline-success flex-grow-1 my-1 mx-1 text-white">
+                            <i class="fa-solid fa-square-root-variable fa-lg text-white"></i>
+                            &nbsp;Run the Numbers
+                        </a>
+                        <a href="https://rockstarinnercircle.com/wp-content/uploads/2021/04/Why-Every-Fixed-Income-Investor-Needs-To-Consider-Bitcoin-As-Portfolio-Insurance.pdf"
+                            target="_blank" class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                            <i class="fa-solid fa-feather-pointed fa-lg text-white"></i>
+                            &nbsp;Original Paper by Greg Foss
+                        </a>
+                        <a href="https://github.com/pxsocs/nakamoto_code" target="_blank"
+                            class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                            <i class="fa-brands fa-github fa-lg text-white"></i>
+                            &nbsp;Open Source Code
+                        </a>
+                        <a href="https://twitter.com/alphaazeta/status/1653177160620814342" target="_blank"
+                            class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                            <i class="fa-brands fa-square-twitter fa-lg text-white"></i>
+                            &nbsp;Original Twitter Thread
+                        </a>
+                        <a href="nostr:note146tkep8yuffq367xzcnw574fv932jn5j8fktmzcml4eu56xq9w3sxyqumh" target="_blank"
+                            class="btn btn-outline-secondary flex-grow-1 my-1 mx-1  text-white">
+                            <i class="fa-solid fa-egg fa-lg text-purple"></i>
+                            &nbsp;Original NOSTR Thread
+                        </a>
+                        </a>
+                    </div>
+                </div>
+                <div class="card-footer text-muted text-end">
+                    <i class="fa-solid text-green fa-cube"></i>
+                    &nbsp;First published at block
+                    <a class="text-white nolink" target="_blank"
+                        href="https://timechaincalendar.com/en/block/787870">787,870</a>
+                </div>
+            </div>
+        </div>
+        <!-- Satoshi Quote -->
+        <div class="col-lg-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Satoshi Quotes&nbsp;
+                        <i class="fa-solid fa-quote-left text-white float-end"></i>
+                    </h5>
+                    <hr>
+                    </p>
+                    <p class="card-text" id="satoshi_loading">
+                        <span class="loadanim">Connecting to Satoshi's Server...</span>
+                    </p>
+                    <p id="quote_section" hide>
+                        Subject:
+                        <span id="subject">...</span>
+                    </p>
+                    <p style="padding-top: 0px; line-height: 1.2; text-align: justify;">
+                        <i class="fas fa-quote-left fa-2x"></i>
+                        <br>
+                        <span class="quote text-small" id="load_quote"></span>
+                    </p>
+                    <p class="blockquote-footer text-white float-end">
+                        Satoshi Nakamoto in
+                        <cite id="load_source" title="Source Title">...</cite>
+                    </p>
+                    <br>
+                    <p class="blockquote-footer float-end">
+                        <cite id="load_date">...</cite>
+                    </p>
+                    <br>
+                    <div class="card-footer text-muted text-end text-small">
+                        Source:
+                        <a class="text-white"
+                            href="https://raw.githubusercontent.com/NakamotoInstitute/nakamotoinstitute.org/0bf08c48cd21655c76e8db06da39d16036a88594/data/quotes.json"
+                            target="_blank">Nakamoto Institute</a>
+                    </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-lg-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Additional Tools&nbsp;
+                        <i class="fa-solid fa-database  text-white float-end"></i>
+                    </h5>
+                    <hr>
+                    <p class="card-text">
+                        Here you'll find tools to help in specific analysis and tasks. These include charts, research
+                        pieces and other supporting data.
+                    </p>
+                    <hr>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                        <a href="/apps/mkt_cap" class="btn btn-outline-success flex-grow-1 my-1 mx-1 text-white">
+                            <i class="fa-solid fa-table-cells fa-lg text-white"></i>
+                            &nbsp;Bitcoin compared to other major asset classes
+                        </a>
+                    </div>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                        <a href="/apps/big_sat_index" class="btn btn-outline-success flex-grow-1 my-1 mx-1 text-white">
+                            <i class="fa-solid fa-burger fa-lg text-white"></i>
+                            &nbsp;How many burgers can 100k sats buy around the world?
+                        </a>
+                    </div>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                        <a href="/hodl_analysis/home" class="btn btn-outline-success flex-grow-1 my-1 mx-1 text-white">
+                            <i class="fa-solid fa-square-root-variable fa-lg text-white"></i>
+                            &nbsp;Top and Bottom returns during a period
+                        </a>
+                    </div>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center">
+                        <a href="/apps/yield_curve" class="btn btn-outline-success flex-grow-1 my-1 mx-1 text-white">
+                            <i class="fa-solid fa-chart-line fa-lg text-white"></i>
+                            &nbsp;Treasury Yield Curve
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script src="/static/js/start.js"></script>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- Footer -->
+            <footer class="site-footer small
+                                fixed-bottom text-white">
+                <div class="float-start" style="margin-left: 20px;">
+                    Bitcoiners Run the Numbers
+                </div>
+                <div class=" float-end" style="margin-right: 20px;">
+                    Copyright &copy; 2023&nbsp;Swan Research | Important
+                    <a href="/disclaimers" class="text-white">DISCLAIMERS</a>
+                </div>
+            </footer>
+            <!-- END OF WRAPPER -->
+             
+            <!-- Chart Modal -->
+            <script src="/static/js/modal_chart.js"></script>
+        </body>
+    </html>

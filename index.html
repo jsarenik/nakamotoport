@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<link rel="icon" href="/static/images/favicon-bitcoin.ico" class="invert">
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Nakamoto Portfolio</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+        <link rel="stylesheet" href="/static/css/warden_main.css">
+        <link rel="stylesheet" href="/static/css/nakamoto_portfolio.css">
+    </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQT21B6DNE"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YQT21B6DNE');
+    </script>
+    <!-- Marketo -->
+    <script type="text/javascript">
+        (function() {
+        var didInit = false;
+        function initMunchkin() {
+            if(didInit === false) {
+            didInit = true;
+            Munchkin.init('875-XKQ-634');
+            }
+        }
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '//munchkin.marketo.net/munchkin.js';
+        s.onreadystatechange = function() {
+            if (this.readyState == 'complete' || this.readyState == 'loaded') {
+            initMunchkin();
+            }
+        };
+        s.onload = initMunchkin;
+        document.getElementsByTagName('head')[0].appendChild(s);
+            })();
+    </script>
+    <body>
+        <!-- partial:index.partial.html -->
+        <img src="/static/images/swan-icon-snow.png" alt="Watermark" class="watermark">
+        <div id="blackhole">
+            <div class="centerHover">
+                <span class="text-white">
+                    NAKAMOTO PORTFOLIO
+                </span>
+                <div class="button-container">
+                    <button id="dive-in-btn" class="dive-in-button">DISCOVER</button>
+                </div>
+            </div>
+        </div>
+        <footer style="position: fixed; bottom: 10px; right: 10px; font-size: 14px; font-family:'Courier New', Courier, monospace; color: #ffffff; z-index:10;">
+            Copyright &copy;
+            <span id="currentYear"></span>
+            Powered by Swan Research
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="/static/js/nakamoto_portfolio.js"></script>
+    </body>
+</html>
