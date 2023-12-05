@@ -1,0 +1,4 @@
+D=nakamotoportfolio.com
+PORT=9999
+MYURL=http://127.0.0.1:$PORT
+URL=http://127.0.0.1:$PORT
