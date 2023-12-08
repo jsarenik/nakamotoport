@@ -10,4 +10,5 @@ cat > realtime_btc <<EOF
 {"cross": "\$", "fx_rate": 1, "btc_usd": $double, "btc_24h_percentage_change": 80.$dec, "btc_fx": $double}
 EOF
 
+git add -A
 git commit -a -m "update realtime_btc with fake values"
